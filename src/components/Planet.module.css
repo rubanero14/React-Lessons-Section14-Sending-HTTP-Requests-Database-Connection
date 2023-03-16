@@ -1,0 +1,28 @@
+.planet {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #333;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+
+.planet h2 {
+  font-size: 2rem;
+  color: #faea0b;
+}
+
+.planet h3 {
+  color: #eccf77;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.planet h4 {
+  color: #fff;
+  font-size: 0.80rem;
+  margin: 0 0 10px 0;
+  text-align: start;
+}

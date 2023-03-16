@@ -13,13 +13,19 @@ button {
   cursor: pointer;
   background: #333;
   border: 1px solid #333;
-  color: white;
+  color: #faea0b;
   padding: 0.75rem 2rem;
   border-radius: 20px;
+  box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease-in-out;
 }
 
 button:focus {
   outline: none;
+}
+
+button:active {
+  transform: scale(.8);
 }
 
 button:hover,
