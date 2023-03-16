@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 import Loading from "./components/Loading";
@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState("");
   const [isError, setIsError] = useState(false);
 
-  const fetchMovies = async () => {
+  const fetchMovies = useCallback(async () => {
     setIsLoading(true);
     try {
       setIsError(false);
@@ -22,7 +22,11 @@ function App() {
       setIsError(true);
     }
     return setIsLoading(false);
-  };
+  }, []); // useCallback is wrapped the fn to avoid infinite loop as it comtains many external states, for dependencies not added since within fn only state is altered not used
+
+  useEffect(() => {
+    fetchMovies();
+  }, [fetchMovies]); // adding fetchMovies fn as dependency because this fn contains many external states within it
 
   let content = "";
 
